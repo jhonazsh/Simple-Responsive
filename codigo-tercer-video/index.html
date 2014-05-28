@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.contenedor-imagen-pequena,
+		.contenedor-imagen-grande{
+			background-color: #464646;
+			/* Comentar la siguiente línea para adaptar el ancho a la imagen, o cambiar a 50% */
+			width: 700px;
+			/* Comentar la siguiente línea para adaptar el alto a la imagen */  
+			height: 700px; 
+		}
+
+		img{
+			width: 100%;
+			/* Comentar la siguiente línea o cambiar a min-width */
+			max-width: 420px;
+		}
+
+		video{
+			width: 100%;
+		}
+
+		.contenedor-video {
+		        padding-bottom:56.25%;
+		        height:0;
+		        overflow: hidden;
+		        position: relative;
+		}
+
+		iframe {
+		        position: absolute;
+		        height:100%;
+		        width:100%;
+		        top:0;
+		        left:0;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- Comentar  este bloque de html para apreciar
+		 mejor la flexibilidad del video de YouTube -->
+	<figure class="contenedor-imagen-pequena">
+		<img src="img/imagen-pequena.png">
+	</figure>
+	<figure class="contenedor-imagen-grande">
+		<img src="img/imagen-grande.png">
+	</figure>
+	<video src="video.mp4" controls></video>
+	<!--/////////////// fin-bloque //////////////-->
+	
+	<div class="contenedor-video">
+		<iframe src="http://www.youtube.com/embed/vr-YtKTlyh8"></iframe>
+	</div>
+</body>
+</html>
